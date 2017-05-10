@@ -1,12 +1,6 @@
 
-			<h1>Hospital</h1>
-	<ul>
-		<li><a href="patients.html">Patiënts</a></li>
-		<li><a href="clients.html">Clients</a></li>
-		<li><a href="species.html">Species</a></li>
-	</ul>
-
 	<h2>Patiënts</h2>
+	
 	<table>
 		<thead>
 			<tr>
@@ -30,8 +24,9 @@
 				<td><?= $patient['patient_status']; ?></td>
 				<td><?= $patient['client_id']; ?></td>
 				<td>edit</td>
-				<td>delete</td>
+				<td> <a href="<?php echo URL . 'home/patient_delete/' . $patient['patient_id']; ?>">delete</a></td>
 
 			</tr>
 			<?php } ?>
 		</tbody>
+			<p><a href="<?= URL ?>home/patient_create">Create</a></p>

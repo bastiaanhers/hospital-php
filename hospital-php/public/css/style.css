@@ -39,4 +39,15 @@ label {
 }
 form div {
 	margin: 5px 0;
+}form p {
+    margin: 5px 0;
+} 
+
+form label {
+    display: inline-block;
+    width: 100px;
+}
+
+form input[type=submit]:only-child {
+    margin-left: 100px;     /* place submit button underneath fields */
 }
