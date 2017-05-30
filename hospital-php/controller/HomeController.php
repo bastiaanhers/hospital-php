@@ -20,6 +20,24 @@ function createSave()
 
 	header("Location:" . URL . "home/index");
 }
+
+function edit($id)
+{
+	render("home/edit", array(
+		'patient' => getPatient($id)
+	));
+}
+
+function editSave()
+{
+	if (!editPatient()) {
+		header("Location:" . URL . "error/index");
+		exit();
+	}
+
+	header("Location:" . URL . "home/index");
+}
+
 function delete($id)
 {
 	if (!deletePatient($id)) {
